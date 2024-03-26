@@ -1,1 +1,28 @@
 <p>tabella-pazienti works!</p>
+
+@for (pz of listaPazienti; track pz.id) {
+    <!-- <ul>
+        <li>Paziente {{ $index }} : {{ pz | json }}</li>
+    </ul> -->
+
+    <hr>
+    <tr>
+        <td>{{pz.id}} |</td>
+        <td>{{pz.codicePazienti}} |</td>
+        <td>{{pz.nome}} |</td>
+        <td>{{pz.cognome}} |</td>
+        <td>{{pz.dataNascita}} |</td>
+        <td>{{pz.medico}} |</td>
+        <td>{{pz.codiceColore}} |</td>
+        <td>{{pz.arrivo}} |</td>
+        <td>{{pz.stato}}</td>
+        <td>
+            <button (click)="modificaPaziente(pz)">Modifica</button>
+            <button (click)="dimettiPaziente(pz)">Dimetti</button>
+        </td>
+    </tr>
+    <br>
+}
+@empty {
+    <p>Non ci sono pazienti</p>
+}
