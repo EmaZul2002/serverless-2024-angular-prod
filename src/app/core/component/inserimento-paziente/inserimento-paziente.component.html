@@ -1,1 +1,45 @@
 <p>inserimento-paziente works!</p>
+
+<form [formGroup]="inserimentoPazienti" (submit)="inserisciPaziente()">
+    <label>
+        Codice Paziente
+        <input type="text" id="codicePaziente" formControlName="codicePaziente">
+    </label>
+    <br>
+    <label>
+        Nome
+        <input type="text" id="nome" formControlName="nome">
+    </label>
+    <br>
+    <label>
+        Cognome
+        <input type="text" id="cognome" formControlName="cognome">
+    </label>
+    <br>
+    <label>
+        Data Nascita
+        <input type="date" id="dataNascita" formControlName="dataNascita">
+    </label>
+    <br>
+    <label>
+        Medico
+        <input type="text" id="medico" formControlName="medico">
+    </label>
+    <br>
+    <label>
+        Codice Colore
+        <input type="text" id="codiceColore" formControlName="codiceColore">
+    </label>
+    <br>
+    <label>
+        Arrivo
+        <input type="text" id="arrivo" formControlName="arrivo">
+    </label>
+    <br>
+    <label>
+        Stato
+        <input type="text" id="stato" formControlName="stato">
+    </label>
+    <br>
+    <button type="submit">Inserisci Paziente</button>
+</form>
